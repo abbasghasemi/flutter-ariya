@@ -1,0 +1,24 @@
+name: ariya
+description: "A collection of widgets for flutter (components, progress and page indicator ...)"
+version: 1.1.0
+repository: https://github.com/abbasghasemi/flutter-ariya
+homepage: https://github.com/abbasghasemi/flutter-ariya
+issue_tracker: https://github.com/abbasghasemi/flutter-ariya/issues
+
+topics:
+  - components
+  - indicators
+  - progressbar
+  - seekbar
+
+environment:
+  sdk: ^2.17.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
