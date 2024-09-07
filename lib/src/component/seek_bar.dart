@@ -73,7 +73,7 @@ class SeekBar extends StatefulWidget {
   });
 
   @override
-  _SeekBarState createState() => _SeekBarState();
+  State<SeekBar> createState() => _SeekBarState();
 }
 
 class _SeekBarState extends State<SeekBar> with TickerProviderStateMixin {
@@ -253,8 +253,8 @@ class _SeekBarState extends State<SeekBar> with TickerProviderStateMixin {
 /// Seekbar controller
 /// see [animateProgress], [first], [last]
 class SeekBarController extends ChangeNotifier {
-  double _min;
-  double _max;
+  final double _min;
+  final double _max;
   double _first;
   double _last;
 
@@ -351,8 +351,8 @@ class SeekBarController extends ChangeNotifier {
         last = t;
       }(first);
     }
-    this._animationDuration = duration;
-    this._animationCurve = curve;
+    _animationDuration = duration;
+    _animationCurve = curve;
     _intervalAnimateListener?.call(first!, last!);
   }
 
@@ -419,7 +419,7 @@ class _SeekBarPainter extends BasePainter {
         painter);
     canvas.restore();
 
-    if (controller._thumpSize > 0)
+    if (controller._thumpSize > 0) {
       for (int i = 0; i < 2; i++) {
         if (i == 1 && !controller._interval) break;
         final progress = controller
@@ -462,5 +462,6 @@ class _SeekBarPainter extends BasePainter {
               RRect.fromRectAndRadius(rect, controller._thumpRadius), painter);
         }
       }
+    }
   }
 }

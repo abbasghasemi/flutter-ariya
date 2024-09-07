@@ -187,8 +187,8 @@ class _IndicatorPainter extends BasePainter {
     }
 
     final currentPage = this.offset.floorToDouble();
-    final offset;
-    final crossingMiddle;
+    final double offset;
+    final bool crossingMiddle;
     if (smooth) {
       final forward = this.offset - currentPage;
       crossingMiddle = forward >= 0.5;

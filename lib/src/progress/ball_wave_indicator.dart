@@ -14,6 +14,10 @@ class ProgressBallWaveIndicator extends StatefulWidget {
   /// Space between each ball
   final double space;
 
+  /// Between 0.0 and 1.0
+  /// Progress time
+  final double timing;
+
   /// Widget size
   final Size size;
 
@@ -28,6 +32,7 @@ class ProgressBallWaveIndicator extends StatefulWidget {
     this.padding,
     required this.color,
     this.space = 5,
+    this.timing = 0.1,
   });
 
   @override
@@ -54,7 +59,7 @@ class _ProgressBallWaveIndicatorState extends State<ProgressBallWaveIndicator>
       final anim = CircleTween(
         begin: 0,
         end: 1,
-        offset: i * 0.1,
+        offset: i * widget.timing,
       ).animate(controller);
       anim.addListener(() {
         if (!mounted) return;

@@ -99,8 +99,16 @@ class AriyaActivity extends StatelessWidget {
               ProgressBallWaveIndicator(
                 color: Colors.primaries[9],
               ),
-              ProgressCircleWaveIndicator(
+              ProgressBallWaveIndicator(
                 color: Colors.primaries[10],
+                timing: 0.3,
+              ),
+              ProgressBallWaveIndicator(
+                color: Colors.primaries[11],
+                timing: 0.5,
+              ),
+              ProgressCircleWaveIndicator(
+                color: Colors.primaries[12],
               ),
               ProgressLinearIndicator(
                 fromProgress: .3,

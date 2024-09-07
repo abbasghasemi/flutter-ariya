@@ -1,3 +1,5 @@
+![Latest version](https://img.shields.io/badge/version-latest_version-blue)
+
 <h1 style="text-align: center">Ariya</h1>
 
 ### A collection of widgets for flutter (components, progress and page indicator ...)

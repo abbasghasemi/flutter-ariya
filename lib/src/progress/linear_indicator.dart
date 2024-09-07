@@ -47,7 +47,7 @@ class ProgressLinearIndicator extends StatefulWidget {
         assert(progress >= 0 && progress <= 1);
 
   @override
-  _ProgressLinearIndicatorState createState() =>
+  State<ProgressLinearIndicator> createState() =>
       _ProgressLinearIndicatorState();
 }
 

@@ -78,7 +78,7 @@ class _ProgressCircularIndicatorState extends State<ProgressCircularIndicator>
   }
 
   void calculate() {
-    if (mounted)
+    if (mounted) {
       setState(() {
         final newTime = SamplingClock().now().millisecondsSinceEpoch;
         int dt = newTime - lastUpdateTime;
@@ -114,6 +114,7 @@ class _ProgressCircularIndicatorState extends State<ProgressCircularIndicator>
           currentProgressTime = 0;
         }
       });
+    }
   }
 
   @override

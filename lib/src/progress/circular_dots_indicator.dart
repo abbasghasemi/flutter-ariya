@@ -122,12 +122,14 @@ class _ProgressCircularDotsPainter extends BasePainter {
       final y = sin(angle) * s * 2.5;
       double p = i / 12 - progress;
       if (p < 0) p += 1;
-      if (faded)
+      if (faded) {
         painter.color = color.withOpacity(p);
-      else
+      } else {
         painter.color = color;
-      final _s = scaled ? s * p : s;
-      canvas.drawOval(Rect.fromLTWH(x - _s / 2, y - _s / 2, _s, _s), painter);
+      }
+      final begin = scaled ? s * p : s;
+      canvas.drawOval(
+          Rect.fromLTWH(x - begin / 2, y - begin / 2, begin, begin), painter);
     }
   }
 

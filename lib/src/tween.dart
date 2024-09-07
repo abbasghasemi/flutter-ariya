@@ -6,8 +6,7 @@ import 'package:flutter/animation.dart';
 class CircleTween extends Tween<double> {
   /// [Tween]
   /// Default constructor
-  CircleTween({double? begin, double? end, required this.offset})
-      : super(begin: begin, end: end);
+  CircleTween({super.begin, super.end, required this.offset});
 
   /// Specifies the delay
   final double offset;
