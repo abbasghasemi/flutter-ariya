@@ -11,3 +11,6 @@ export 'src/progress/circular_dots_indicator.dart';
 export 'src/progress/line_wave_indicator.dart';
 export 'src/progress/linear_indicator.dart';
 export 'src/tween.dart';
+export 'src/effect/fireworks.dart';
+export 'src/effect/confetti.dart';
+export 'src/utils.dart';

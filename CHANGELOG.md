@@ -1,3 +1,8 @@
+## 1.1.2
+
+* Added EffectFireworks
+* Added EffectConfetti
+
 ## 1.1.1
 
 * ProgressBallWaveIndicator add timing.

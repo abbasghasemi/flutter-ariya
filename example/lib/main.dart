@@ -43,6 +43,7 @@ class AriyaActivity extends StatelessWidget {
       first: 0,
       last: 0.1,
     );
+    final controller4 = ConfettiController();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ariya"),
@@ -194,6 +195,21 @@ class AriyaActivity extends StatelessWidget {
               ),
               const SizedBox(width: double.infinity, child: Text("Indicator")),
               PageIndicatorDemo(),
+              const SizedBox(width: double.infinity, child: Text("Effect")),
+              EffectFireworks(
+                size: const Size(250, 250),
+                count: 20,
+              ),
+              EffectConfetti(
+                controller: controller4,
+                child: Padding(
+                  padding: const EdgeInsets.all(120),
+                  child: ElevatedButton(
+                    onPressed: () => controller4.start(),
+                    child: const Text("Start"),
+                  ),
+                ),
+              )
             ],
           ),
         ),

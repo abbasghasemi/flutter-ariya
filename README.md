@@ -2,7 +2,7 @@
 
 <h1 style="text-align: center">Ariya</h1>
 
-### A collection of widgets for flutter (components, progress and page indicator ...)
+### A collection of widgets for flutter (components, effects, progress and page indicator ...)
 
 ## Features
 
@@ -24,6 +24,10 @@
 - ProgressCircularIndicator
 - ProgressLineWaveIndicator
 - ProgressLinearIndicator
+
+### Effect
+- EffectFireworks ![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectFireworks.gif?raw=true)
+- EffectConfetti ![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectConfetti.gif?raw=true)
 
 ## Getting started
 

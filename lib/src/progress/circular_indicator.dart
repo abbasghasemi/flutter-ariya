@@ -77,6 +77,9 @@ class _ProgressCircularIndicatorState extends State<ProgressCircularIndicator>
     return t * t;
   }
 
+  // The Progress logic is a port of the logic in the following file:
+  // https://github.com/DrKLO/Telegram/blob/master/TMessagesProj/src/main/java/org/telegram/ui/Components/RadialProgress.java
+  // As of September 2023.
   void calculate() {
     if (mounted) {
       setState(() {
@@ -190,9 +193,6 @@ class _ProgressCircularPainter extends BasePainter {
     final x = width / 2;
     final y = height / 2;
     canvas.translate(x, y);
-    final rect = Rect.fromLTRB(-x, -y, x, y);
-    final start = startAngle * 3.14 / 180;
-    final length = angleLength * 3.14 / 180;
     if (backgroundColor != null) {
       painter.color = backgroundColor!;
       painter.strokeWidth = backgroundWidth;
@@ -200,7 +200,12 @@ class _ProgressCircularPainter extends BasePainter {
     }
     painter.color = color;
     painter.strokeWidth = strokeWidth;
-    canvas.drawArc(rect, start, length, false, painter);
+    final rect = Rect.fromLTRB(-x, -y, x, y);
+    final start = startAngle * 3.14 / 180;
+    final length = angleLength * 3.14 / 180;
+    if (length.abs() > 0.005) {
+      canvas.drawArc(rect, start, length, false, painter);
+    }
   }
 
   @override
