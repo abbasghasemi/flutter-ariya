@@ -193,6 +193,38 @@ class AriyaActivity extends StatelessWidget {
                   ),
                 ],
               ),
+              Shimmer(
+                loopCount: Shimmer.infinity,
+                child: _shimmerPlaceHolder(),
+              ),
+              Shimmer(
+                direction: ShimmerDirection.rightToLeft,
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.yellow.withOpacity(0),
+                    Colors.yellow.withOpacity(0.5),
+                    Colors.yellow.withOpacity(0)
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.centerLeft,
+                ),
+                masked: false,
+                delay: ShimmerDelay.veryHigh,
+                duration: const Duration(seconds: 3),
+                radius: const Radius.circular(7),
+                child: Container(
+                  width: 260,
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(7)),
+                  child: const Text(
+                    'S H I M M E R',
+                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
               const SizedBox(width: double.infinity, child: Text("Indicator")),
               PageIndicatorDemo(),
               const SizedBox(width: double.infinity, child: Text("Effect")),
@@ -209,7 +241,7 @@ class AriyaActivity extends StatelessWidget {
                     child: const Text("Start"),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -304,4 +336,73 @@ class PageIndicatorDemo extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget _shimmerPlaceHolder() {
+  return SizedBox(
+    width: 250,
+    child: Column(
+      children: [
+        const Text(
+          'S H I M M E R',
+          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+        ),
+        Row(
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                  color: Colors.grey, borderRadius: BorderRadius.circular(7)),
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+            Expanded(
+              child: Column(
+                children: [
+                  Container(
+                    width: double.maxFinite,
+                    height: 15,
+                    color: Colors.grey,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Container(
+                    width: double.maxFinite,
+                    height: 10,
+                    color: Colors.grey,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          height: 15,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Expanded(
+                        child: Container(
+                          height: 15,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        )
+      ],
+    ),
+  );
 }

@@ -1,4 +1,4 @@
-![Latest version](https://img.shields.io/badge/version-latest_version-blue)
+[![Latest version](https://img.shields.io/pub/v/ariya.svg)](https://pub.dev/packages/ariya)
 
 <h1 style="text-align: center">Ariya</h1>
 
@@ -11,6 +11,10 @@
 ### Components
 
 - SeekBar
+
+![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/shimmer.gif?raw=true)
+
+- Shimmer
 
 ### Page indicator
 
@@ -26,8 +30,13 @@
 - ProgressLinearIndicator
 
 ### Effect
-- EffectFireworks ![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectFireworks.gif?raw=true)
-- EffectConfetti ![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectConfetti.gif?raw=true)
+![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectFireworks.gif?raw=true)
+
+- EffectFireworks
+
+![Demo](https://github.com/abbasghasemi/flutter-ariya/blob/master/example/effectConfetti.gif?raw=true)
+
+- EffectConfetti
 
 ## Getting started
 
@@ -44,6 +53,13 @@ SeekBar(
   radius: const Radius.circular(5),
   thumpColor: Colors.yellow,
   thumpRadius: const Radius.circular(3),
+)
+```
+
+### Sample Shimmer
+```dart
+Shimmer(
+  child: Container(width: 50, height: 10, color: Colors.blue),
 )
 ```
 
